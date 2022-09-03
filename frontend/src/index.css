@@ -2,10 +2,11 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 20;
 }
 
 body {
-  height: 120vh;
+  height: 150vh;
 }
 
 .nav-item {
@@ -13,6 +14,48 @@ body {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+}
+
+.leafletContainer {
+  width: 100%;
+  height: 400px;
+  overflow-x: hidden;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.swiperSlideDiv {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.swiperSlideText {
+  color: #ffffff;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  font-weight: 600;
+  max-width: 90%;
+  font-size: 1.25rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+}
+
+.swiperSlidePrice {
+  color: #000000;
+  position: absolute;
+  top: 143px;
+  left: 11px;
+  font-weight: 600;
+  max-width: 90%;
+  background-color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff !important;
 }
 
 .navbarList {
@@ -70,4 +113,33 @@ body {
 
 .btn-primary:hover {
   background-color: #0c6;
+}
+
+.categoryImg {
+  height: 300px;
+  border-radius: 20px;
+}
+
+.categoryPrice {
+  color: #0c6;
+}
+.bg-mine {
+  background-color: #0c6;
+}
+
+.form-select {
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.form-select:focus {
+  box-shadow: none;
+}
+
+.create-listing {
+  height: 150vh;
+}
+
+.listingDetails {
+  height: 110vh;
 }

@@ -70,8 +70,37 @@ const getUserProfile = asyncHandler(async (req, res) => {
   }
 });
 
+// -- PRIVATE
+
+const updateProfile = asyncHandler(async (req, res) => {
+  const { name, email, password } = req.body;
+  // Find the User
+  let user = await User.findById(req.params.id);
+  if (!user) {
+    res.status(404);
+    throw new Error("User Not Found");
+  }
+
+  user.name = name || user.name;
+  user.email = email || user.email;
+
+  if (password) {
+    user.password = password;
+  }
+
+  const updatedUser = await user.save();
+
+  res.json({
+    _id: updatedUser._id,
+    name: updatedUser.name,
+    email: updatedUser.email,
+    token: generateToken(updatedUser._id),
+  });
+});
+
 module.exports = {
   registerUser,
   loginUser,
   getUserProfile,
+  updateProfile,
 };

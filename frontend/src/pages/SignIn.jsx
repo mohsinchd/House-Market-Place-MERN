@@ -45,7 +45,7 @@ const SignIn = () => {
   };
 
   return (
-    <div>
+    <div className="container mt-3">
       <h1>Welcome Back!</h1>
       {loading && <Loader />}
       <form onSubmit={onSubmit}>

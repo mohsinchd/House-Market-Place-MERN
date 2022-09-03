@@ -7,6 +7,9 @@ import {
   USER_LOGIN_REQUEST,
   USER_LOGOUT,
   USER_RESET,
+  USER_UPDATE_REQUEST,
+  USER_UPDATE_SUCCESS,
+  USER_UPDATE_FAIL,
 } from "../constants/userConstants";
 import axios from "axios";
 
@@ -21,6 +24,7 @@ export const registerUser = (userData) => async (dispatch) => {
       type: USER_REGISTER_SUCCESS,
       payload: data,
     });
+
     localStorage.setItem("user", JSON.stringify(data));
   } catch (error) {
     dispatch({
@@ -48,6 +52,40 @@ export const loginUser = (userData) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: USER_LOGIN_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
+export const updateUser = (userData, id) => async (dispatch, getState) => {
+  try {
+    dispatch({
+      type: USER_UPDATE_REQUEST,
+    });
+
+    const {
+      loginUser: { userInfo },
+      registerUser: { userInfo: registerUserInfo },
+    } = getState();
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token || registerUserInfo.token}`,
+      },
+    };
+
+    const { data } = await axios.post(`/api/users/${id}`, userData, config);
+    dispatch({
+      type: USER_UPDATE_SUCCESS,
+      payload: data,
+    });
+    localStorage.setItem("user", JSON.stringify(data));
+  } catch (error) {
+    dispatch({
+      type: USER_UPDATE_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message

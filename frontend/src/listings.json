@@ -1,0 +1,116 @@
+{
+	"listings": [
+		{
+			"name": "Beautiful Stratford Condo",
+			"type": "rent",
+			"userRef": "ID OF A USER",
+			"bedrooms": 2,
+			"bathrooms": 2,
+			"parking": true,
+			"furnished": true,
+			"offer": true,
+			"regularPrice": 2500,
+			"discountedPrice": 2000,
+			"location": "8601 West Peachtree St Stratford, CT 06614",
+			"geolocation": {
+				"lat": "41.205590",
+				"lng": "-73.150530"
+			},
+			"imageUrls": [],
+			"timestamp": "00:00:00"
+		},
+		{
+			"name": "Flowery Branch Beauty",
+			"type": "sale",
+			"userRef": "ID OF A USER",
+			"bedrooms": 4,
+			"bathrooms": 3,
+			"parking": true,
+			"furnished": false,
+			"offer": false,
+			"regularPrice": 650000,
+			"location": "517 High Ridge St Flowery Branch, GA 30542",
+			"geolocation": {
+				"lat": "34.1851",
+				"lng": "-83.9252"
+			},
+			"imageUrls": [],
+			"timestamp": "00:00:00"
+		},
+		{
+			"name": "Brand New Cincinnati Home",
+			"type": "sale",
+			"userRef": "ID OF A USER",
+			"bedrooms": 4,
+			"bathrooms": 2,
+			"parking": true,
+			"furnished": false,
+			"offer": true,
+			"regularPrice": 700000,
+			"discountedPrice": 690000,
+			"location": "9814B Cedar Swamp Street Cincinnati, OH 45211",
+			"geolocation": {
+				"lat": "39.144320",
+				"lng": "-84.569630"
+			},
+			"imageUrls": [],
+			"timestamp": "00:00:00"
+		},
+		{
+			"name": "Classy Home In Clayton",
+			"type": "sale",
+			"userRef": "ID OF A USER",
+			"bedrooms": 4,
+			"bathrooms": 4,
+			"parking": true,
+			"furnished": false,
+			"offer": true,
+			"regularPrice": 720000,
+			"discountedPrice": 670000,
+			"location": "7644 Carswold Dr Clayton, MO, 63105",
+			"geolocation": {
+				"lat": "35.628690",
+				"lng": "-78.455520"
+			},
+			"imageUrls": [],
+			"timestamp": "00:00:00"
+		},
+		{
+			"name": "House For Rent In Milton",
+			"type": "sale",
+			"userRef": "ID OF A USER",
+			"bedrooms": 3,
+			"bathrooms": 2,
+			"parking": true,
+			"furnished": false,
+			"offer": false,
+			"regularPrice": 630000,
+			"location": "810 North Lyme Drive Milton, MA 02186",
+			"geolocation": {
+				"lat": "42.247270",
+				"lng": "-71.053470"
+			},
+			"imageUrls": [],
+			"timestamp": "00:00:00"
+		},
+		{
+			"name": "Modern 3BR Apartment In FL",
+			"type": "rent",
+			"userRef": "ID OF A USER",
+			"bedrooms": 2,
+			"bathrooms": 1,
+			"parking": true,
+			"furnished": true,
+			"offer": true,
+			"regularPrice": 2300,
+			"discountedPrice": 1900,
+			"location": "11 Buttonwood Street Fort Lauderdale, FL 33308",
+			"geolocation": {
+				"lat": "26.209080",
+				"lng": "-80.112100"
+			},
+			"imageUrls": [],
+			"timestamp": "00:00:00"
+		}
+	]
+}

@@ -11,6 +11,7 @@ connectDB();
 app.use(express.json());
 // Routes
 app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/listings", require("./routes/listingRoutes"));
 
 // ErrorHandlers
 app.use(notFound);
